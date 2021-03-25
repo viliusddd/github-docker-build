@@ -2,7 +2,8 @@ FROM python:2
 
 
 WORKDIR /usr/src/app
-
+RUN ll /
+COPY /github/workspace/requirements/blender_requirements.txt
 RUN apt-get update && apt-get install -y \
   software-properties-common \
   blender \
