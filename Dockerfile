@@ -1,4 +1,4 @@
-FROM node:10-slim
+FROM python:2
 
 
 WORKDIR /usr/src/app
@@ -8,13 +8,12 @@ RUN apt-get update && apt-get install -y \
   blender \
   imagemagick \
   nodejs \
-  curl \
-  python
+  curl
 
-RUN mvm install v12.12
+# RUN mvm install v12.12
 
-RUN npm install -g gltf-pipeline
+# RUN npm install -g gltf-pipeline
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN python -m pip install --no-cache-dir -r requirements.txt
 RUN python -m pip install mock
-RUN git lfs install
+# RUN git lfs install
