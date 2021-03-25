@@ -4,12 +4,13 @@ FROM python:2
 WORKDIR /usr/src/app
 RUN ls -l /
 COPY Dockerfile Dockerfile
-RUN apt-get update && apt-get install -y \
-  software-properties-common \
-  blender \
-  imagemagick \
-  nodejs \
-  curl
+RUN ls -l
+# RUN apt-get update && apt-get install -y \
+#   software-properties-common \
+#   blender \
+#   imagemagick \
+#   nodejs \
+#   curl
 
 # RUN mvm install v12.12
 
