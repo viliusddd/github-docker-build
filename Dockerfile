@@ -3,9 +3,6 @@ FROM node:10-slim
 
 WORKDIR /usr/src/app
 
-# install dependencies
-RUN "curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -"
-
 RUN apt-get update && apt-get install -y git-lfs \
     python2 \
     blender \
