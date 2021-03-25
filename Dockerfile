@@ -3,12 +3,14 @@ FROM node:10-slim
 
 WORKDIR /usr/src/app
 
-RUN apt-get update && apt-get install -y git-lfs \
-    python2 \
-    blender \
-    imagemagick \
-    nodejs \
-    curl
+RUN apt-get update && apt-get install -y \
+  software-properties-common \
+  git-lfs \
+  python2 \
+  blender \
+  imagemagick \
+  nodejs \
+  curl
 
 RUN mvm install v12.12
 
