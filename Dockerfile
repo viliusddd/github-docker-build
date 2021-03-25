@@ -3,7 +3,7 @@ FROM python:2
 WORKDIR /usr/src/app
 
 # install dependencies
-RUN curl -sL https://deb.nodesource.com/setup_12.x | -E bash -
+RUN "curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -"
 
 RUN apt-get update && apt-get install -y git-lfs \
     blender \
