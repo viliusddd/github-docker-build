@@ -8,7 +8,8 @@ RUN "curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -"
 RUN apt-get update && apt-get install -y git-lfs \
     blender \
     imagemagick \
-    nodejs
+    nodejs \
+    curl
 
 RUN mvm install v12.12
 
