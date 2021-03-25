@@ -3,9 +3,6 @@ FROM node:10-slim
 
 WORKDIR /usr/src/app
 
-RUN pwd
-RUN which python
-
 RUN apt-get update && apt-get install -y \
   software-properties-common \
   blender \
