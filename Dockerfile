@@ -3,10 +3,11 @@ FROM node:10-slim
 
 WORKDIR /usr/src/app
 
+RUN echo cwd
+RUN which python
+
 RUN apt-get update && apt-get install -y \
   software-properties-common \
-  git-lfs \
-  python2 \
   blender \
   imagemagick \
   nodejs \
