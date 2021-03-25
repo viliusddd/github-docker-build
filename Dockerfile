@@ -3,7 +3,7 @@ FROM python:2
 
 WORKDIR /usr/src/app
 RUN ls -l /
-COPY /github/workspace/requirements/ requirements/
+COPY Dockerfile Dockerfile
 RUN apt-get update && apt-get install -y \
   software-properties-common \
   blender \
