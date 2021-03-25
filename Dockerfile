@@ -3,7 +3,7 @@ FROM node:10-slim
 
 WORKDIR /usr/src/app
 
-RUN echo cwd
+RUN cwd
 RUN which python
 
 RUN apt-get update && apt-get install -y \
@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y \
   blender \
   imagemagick \
   nodejs \
-  curl
+  curl \
+  python
 
 RUN mvm install v12.12
 
