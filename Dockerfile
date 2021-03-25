@@ -2,7 +2,7 @@ FROM python:2
 
 
 WORKDIR /usr/src/app
-RUN ll /
+RUN ls -l /
 COPY /github/workspace/requirements/ requirements/
 RUN apt-get update && apt-get install -y \
   software-properties-common \
